@@ -54,7 +54,7 @@ img {
 
 .text-wrapper h1 {
    font-size: 6rem;
-   letter-spacing: 16px;
+   letter-spacing: 6px;
    text-shadow: 3px 3px 3px rgba(0, 0, 0, .6);
    margin: 0;
 }
@@ -64,4 +64,12 @@ img {
    font-weight: bold;
    margin: 0;
    padding-bottom: 1rem;
+}
+
+@media (min-width: 901px) {
+   .text-wrapper h1 {
+      font-size: 8rem;
+   }
+
+   ;
 }
