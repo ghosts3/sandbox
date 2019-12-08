@@ -1,3 +1,7 @@
+* {
+   box-sizing: border-box;
+}
+
 body {
    font-family: 'Proza Libre',
       sans-serif;
@@ -21,6 +25,7 @@ img {
    grid-template-columns: 1fr;
    grid-template-rows: auto;
    grid-template-areas: "overlay";
+   position: relative;
 }
 
 .image-wrapper {
@@ -32,6 +37,19 @@ img {
    align-self: center;
    justify-self: center;
    padding: 0 1rem;
+   max-width: 30rem;
+}
+
+.text-wrapper::before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(196, 172, 69, 0.2);
+
 }
 
 .text-wrapper h1 {
