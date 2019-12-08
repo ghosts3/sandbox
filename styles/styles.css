@@ -1,6 +1,6 @@
 body {
-    font-family: 'Proza Libre',
-        sans-serif;
+   font-family: 'Proza Libre',
+      sans-serif;
 }
 
 h1,
@@ -8,10 +8,41 @@ h2,
 h3,
 h4 {
 
-    font-family: 'Cormorant Garamond', serif;
+   font-family: 'Cormorant Garamond', serif;
 }
 
 img {
-    display: block;
-    width: 100%;
+   display: block;
+   width: 100%;
+}
+
+.hero {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
+   grid-template-areas: "overlay";
+}
+
+.image-wrapper {
+   grid-area: overlay;
+}
+
+.text-wrapper {
+   grid-area: overlay;
+   align-self: center;
+   justify-self: center;
+   padding: 0 1rem;
+}
+
+.text-wrapper h1 {
+   font-size: 6rem;
+   text-shadow: 3px 3px 3px rgba(0, 0, 0, .6);
+   margin: 0;
+}
+
+.text-wrapper p {
+   font-size: 2rem;
+   font-weight: bold;
+   margin: 0;
+   padding-bottom: 1rem;
 }
