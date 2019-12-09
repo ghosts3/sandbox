@@ -1,5 +1,6 @@
 :root {
-   --max-width: 50rem;
+   --max-width: 70rem;
+   --background-color: #F6ED91;
 }
 
 * {
@@ -11,14 +12,19 @@ body {
    flex-direction: column;
    font-family: 'Proza Libre', sans-serif;
    color: #333;
+   line-height: 1.5;
 }
 
 h1,
 h2,
 h3,
 h4 {
-
    font-family: 'Cormorant Garamond', serif;
+}
+
+footer {
+   height: 200px;
+   background-color: #F25126;
 }
 
 img {
@@ -32,6 +38,7 @@ img {
    grid-template-rows: auto;
    grid-template-areas: "overlay";
    position: relative;
+   line-height: 1;
 }
 
 .hero .image-wrapper {
@@ -73,14 +80,66 @@ img {
    padding-bottom: 1rem;
 }
 
+.article-background.yellow {
+   background-color: var(--background-color);
+}
+
+.article-background.orange {
+   background-color: #E6F5F8;
+}
+
+.panel {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+   padding: 4rem 1rem;
+   max-width: var(--max-width);
+}
+
+.panel .text-wrapper {
+   flex: 50%;
+   font-size: 1.25rem;
+   padding: 0 1rem;
+}
+
+.panel .image-wrapper {
+   flex: 50%;
+}
+
+.panel img {
+   height: 100%;
+   object-fit: cover;
+}
+
+.panel .top img {
+   object-position: top;
+}
+
+.panel .left {
+   margin-bottom: 1rem;
+   order: -1;
+}
+
+.tagline {
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 6rem;
+   text-align: center;
+   padding: 3rem 0;
+
+}
+
 .cards {
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: repeat(4, auto);
    grid-gap: 1rem;
-
-   align-self: center;
    max-width: var(--max-width);
+   margin: auto;
+}
+
+.card {
+   outline: red 1px;
+   text-align: center;
 }
 
 .cards a {
@@ -90,6 +149,22 @@ img {
 
 
 @media (min-width: 500px) {
+   .panel {
+      flex-direction: row;
+   }
+
+   .panel.clamp {
+      height: 75vh;
+   }
+
+   .panel .text-wrapper {
+      font-size: 1rem;
+   }
+
+   .panel .left {
+      margin-right: 1rem;
+   }
+
    .cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -101,6 +176,10 @@ img {
 @media (min-width: 901px) {
    .hero .text-wrapper h1 {
       font-size: 8rem;
+   }
+
+   .panel .text-wrapper {
+      font-size: 1.5rem;
    }
 
    .cards {
