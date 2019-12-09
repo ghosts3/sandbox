@@ -1,8 +1,14 @@
-.hero * {
+:root {
+   --max-width: 50rem;
+}
+
+* {
    box-sizing: border-box;
 }
 
 body {
+   display: flex;
+   flex-direction: column;
    font-family: 'Proza Libre', sans-serif;
    color: #333;
 }
@@ -67,13 +73,38 @@ img {
    padding-bottom: 1rem;
 }
 
+.cards {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(4, auto);
+   grid-gap: 1rem;
+
+   align-self: center;
+   max-width: var(--max-width);
+}
+
 .cards a {
    text-decoration: none;
    color: inherit;
 }
 
+
+@media (min-width: 500px) {
+   .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, min-content);
+   }
+
+}
+
 @media (min-width: 901px) {
-   .text-wrapper h1 {
+   .hero .text-wrapper h1 {
       font-size: 8rem;
+   }
+
+   .cards {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: min-content;
    }
 }
