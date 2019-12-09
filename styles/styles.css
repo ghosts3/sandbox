@@ -245,10 +245,9 @@ nav {
 
 .tagline {
    font-family: 'Cormorant Garamond', serif;
-   font-size: 6rem;
+   font-size: 4rem;
    text-align: center;
    padding: 3rem 0;
-
 }
 
 .cards {
@@ -478,33 +477,6 @@ input[type="submit"]:hover {
    color: var(--form-color);
 }
 
-@media (max-width: 600px) {
-   form {
-      grid-template-columns: 1fr;
-   }
-
-   form>*,
-   input,
-   .checkbox,
-   .radio,
-   .question,
-   .wide-question,
-   input[type="submit"] {
-      grid-column: 1 / 2;
-   }
-
-   label {
-      justify-self: start;
-      align-self: end;
-   }
-
-   input[type="submit"] {
-      justify-self: center;
-   }
-}
-
-
-
 @media (min-width: 500px) {
 
    .menu-bar {
@@ -589,6 +561,34 @@ input[type="submit"]:hover {
    }
 }
 
+@media (max-width: 600px) {
+   form {
+      grid-template-columns: 1fr;
+   }
+
+   form>*,
+   input,
+   .checkbox,
+   .radio,
+   .question,
+   .wide-question,
+   input[type="submit"] {
+      grid-column: 1 / 2;
+   }
+
+   label {
+      justify-self: start;
+      align-self: end;
+   }
+
+   input[type="submit"] {
+      justify-self: center;
+   }
+
+   .tagline {
+      font-size: 6rem;
+   }
+}
 
 @media (min-width: 901px) {
    .hero .text-wrapper h1 {
