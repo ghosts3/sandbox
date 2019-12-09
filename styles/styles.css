@@ -3,8 +3,8 @@
 }
 
 body {
-   font-family: 'Proza Libre',
-      sans-serif;
+   font-family: 'Proza Libre', sans-serif;
+   color: #333;
 }
 
 h1,
@@ -66,10 +66,13 @@ img {
    padding-bottom: 1rem;
 }
 
+.cards a {
+   text-decoration: none;
+   color: inherit;
+}
+
 @media (min-width: 901px) {
    .text-wrapper h1 {
       font-size: 8rem;
    }
-
-   ;
 }
