@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Burton Sandbox</title>
+    <meta name="description" content="a sandbox for messing with new tech-y stuff">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Proza+Libre&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".hamburger").click(function () {
+                $(".menu-bar").addClass("open");
+            });
+
+            $(".close").click(function () {
+                $(".menu-bar").removeClass("open");
+            });
+
+        });
+    </script>
+</head>
+
+<body class="form">
+    <main>
+        <article>
+            <h1>Survey</h1>
+
+            <form action="">
+                <label for="fullname">Your full name:</label>
+                <input type="text" name="fullname" id="fullname">
+                <label for="email">Your email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="phone">Your phone number:</label>
+                <input type="tel" name="phone" id="phone">
+                <label for="birthdate">Your birthdate:</label>
+                <input type="date" name="birthdate" id="birthdate">
+
+                <p class="question">Which of the following would you guess are ingredients of Vegemite? (Check all that
+                    apply)</p>
+                <div class="checkbox">
+                    <input type="checkbox" id="wombat" name="ingredients" value="wombat">
+                    <label for="wombat">Wombat</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="kiwi-feet" name="ingredients" value="kiwi-feet">
+                    <label for="kiwi-feet">Dried kiwi feet</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="eucalyptus" name="ingredients" value="eucalyptus">
+                    <label for="eucalyptus">Eucalyptus tincture</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="emu" name="ingredients" value="emu">
+                    <label for="emu">Emu oil</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="kanga" name="ingredients" value="kanga-claw">
+                    <label for="kanga">Kangaroo claw</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="platy" name="ingredients" value="platypus-liver">
+                    <label for="platy">Platypus liver</label>
+                </div>
+
+                <p class="question">How would you describe the taste of Vegemite?</p>
+                <div class="radio">
+                    <input type="radio" name="taste" id="asphalt" value="asphalt">
+                    <label for="asphalt">Powdered asphalt</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="taste" id="tar" value="tar">
+                    <label for="tar">Lukewarm tar</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="taste" id="salt" value="salty">
+                    <label for="salt">Salty</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="taste" id="delicious" value="delicious">
+                    <label for="delicious">Amazeballs</label>
+                </div>
+
+                <label for="opinion" class="question">Compose a haiku about Vegemite</label>
+                <textarea name="opinion" id="opinion" placeholder="5/7/5 syllable count" rows="4" cols="30"></textarea>
+                <div class="spacer"></div>
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </main>
+</body>
+
+</html>
