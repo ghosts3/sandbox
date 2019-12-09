@@ -537,6 +537,9 @@ input[type="submit"]:hover {
       transform-origin: left;
    }
 
+   .tagline {
+      font-size: 6rem;
+   }
 
    .panel {
       flex-direction: row;
@@ -585,9 +588,7 @@ input[type="submit"]:hover {
       justify-self: center;
    }
 
-   .tagline {
-      font-size: 6rem;
-   }
+
 }
 
 @media (min-width: 901px) {
