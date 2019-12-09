@@ -8,9 +8,44 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
    <link rel="stylesheet" href="styles/styles.css">
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+   <script>
+      $(document).ready(function () {
+         $(".hamburger").click(function () {
+            $(".menu-bar").addClass("open");
+         });
+
+         $(".close").click(function () {
+            $(".menu-bar").removeClass("open");
+         });
+
+      });
+   </script>
+</head>
 </head>
 
 <body>
+   <div class="menu-bar">
+      <div class="hamburger">
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+      <nav>
+         <ul>
+            <li><a href="">Mission</a></li>
+            <li><a href="">Survey</a></li>
+            <li><a href="">Angst</a></li>
+            <li><a href="">Weltschmerz</a></li>
+            <li><a href="">About</a></li>
+         </ul>
+         <div class="close">
+            <div></div>
+            <div></div>
+         </div>
+      </nav>
+   </div>
    <div class="hero">
       <div class="image-wrapper">
          <picture>
