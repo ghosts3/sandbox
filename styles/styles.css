@@ -38,6 +38,7 @@ img {
    justify-self: center;
    padding: 0 1rem;
    max-width: 30rem;
+   color: #000;
 }
 
 .hero .text-wrapper::before {
